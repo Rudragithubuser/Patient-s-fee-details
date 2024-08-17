@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+    padding-bottom: 50px;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#notes {
+    overflow-y: auto;
+    max-height: 400px;
+    padding-right: 15px;
+}
+
+/* Note Styling */
+.note {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.note h3 {
+    color: #ff4757;
+    margin-bottom: 10px;
+}
+
+.note p {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.delete-btn {
+    padding: 8px;
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #ff4757;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 1rem;
+    }
+
+    .note {
+        padding: 15px;
+    }
+
+    .delete-btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
